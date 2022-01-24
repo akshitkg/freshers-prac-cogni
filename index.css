@@ -24,7 +24,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: stretch; */
+    width: auto;
 
     width: 100%;
 }
@@ -44,10 +44,12 @@ body{
     size: inherit;
 }
 
-.perks_and_incentives-cards-container{
+.perks-container{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     
 }
 
+.perks-card{
+    /* width: 400px;     */
+}
