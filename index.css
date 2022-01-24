@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+#title-1{
+    /* border-bottom: white 3px; */
+    font-weight: bold;
+    /* text-decoration: underline; */
+    text-underline-offset: 2px;
+    /* text-underline-position: */
+    border-bottom: 3px solid white;
+    font-size: 1.2rem;
+}
+
+#title-2{
+    border-bottom: 3px solid aqua;
+    font-size: 1.2rem   ;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: stretch; */
+
+    width: 100%;
+}
+
+.hero-image-container img{
+    width: 300px;
+    height: 300px;
+}
+
+.middle-divider-container{
+    margin-top: 100px;
+    padding-right: 45%;
+    padding-left: 50%;
+}
+
+.middle-divider-container img{
+    size: inherit;
+}
+
+.perks_and_incentives-cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
