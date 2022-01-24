@@ -45,11 +45,23 @@ body{
 }
 
 .perks-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     
+    
+    
+    /* justify-content: stretch; */
 }
 
 .perks-card{
     /* width: 400px;     */
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(131, 148, 182, 0.2);
+    margin: 10px;
+    padding: 4px;
 }
