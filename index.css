@@ -1,87 +1,102 @@
-body{
-    background-color: black;
-    color: white;
-    overflow-x: hidden;
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
 }
 
-#title-1{
-    /* border-bottom: white 3px; */
-    font-weight: bold;
-    /* text-decoration: underline; */
-    text-underline-offset: 2px;
-    /* text-underline-position: */
-    border-bottom: 3px solid white;
-    font-size: 1.2rem;
+#title-1 {
+  /* border-bottom: white 3px; */
+  font-weight: bold;
+  /* text-decoration: underline; */
+  text-underline-offset: 2px;
+  /* text-underline-position: */
+  border-bottom: 3px solid white;
+  font-size: 1.2rem;
 }
 
-#title-2{
-    border-bottom: 3px solid aqua;
-    font-size: 1.2rem   ;
+#title-2 {
+  border-bottom: 3px solid aqua;
+  font-size: 1.2rem;
 }
 
-.hero-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: auto;
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: auto;
 
+  width: 100%;
+}
+
+.hero-image-container img {
+  width: 300px;
+  height: 300px;
+}
+
+.middle-divider-container {
+  margin-top: 100px;
+  padding-right: 45%;
+  padding-left: 50%;
+}
+
+.middle-divider-container img {
+  size: inherit;
+}
+
+.perks-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 100px 80px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+    padding: 5rem;
+}
+
+.perks-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #111b1e;
+  padding: 1.5rem;
+}
+
+.one{
+    height: auto;
     width: 100%;
 }
 
-.hero-image-container img{
-    width: 300px;
-    height: 300px;
-}
 
-.middle-divider-container{
-    margin-top: 100px;
-    padding-right: 45%;
-    padding-left: 50%;
-}
-
-.middle-divider-container img{
-    size: inherit;
-}
-
-.perks-container{
-    
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 100px 80px; 
-    grid-template-areas: 
-        ". . ."
-        ". . ."; 
-     
-    
-}
-
-.perks-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-.spp_steps-container{
-    margin-top: none;
+.spp_steps-container {
+  margin-top: none;
 }
 
 /* Media Queries */
 
-@media screen and (max-width: 768px) {
-    .perks-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        /* gap: 100px 80px; */
-        grid-template-areas: 
-        ". ."
-        ". ."
-        ". .";
-    }
+@media screen and (max-width: 968px) {
+  .perks-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    position: relative;
+    padding: 5px;
+    column-gap: 4rem;
+    /* max-width: 100%; */
+    /* height: auto; */
+    /* overflow-x: hidden !important; */
+    position: relative;
+    overflow: hidden;
+    /* flex-shrink: inherit; */
+    /* gap: 100px 80px; */
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+  }
+
 }
