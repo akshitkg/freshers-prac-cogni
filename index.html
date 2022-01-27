@@ -8,7 +8,50 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <nav>Navbar here</nav>
+    <nav class="nav">
+      <input type="checkbox" class="nav__checkbox" id="nav__checkbox" />
+      <label for="nav__checkbox" class="nav__toggle">
+        <svg
+          class="menu"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          style="fill: #000000"
+        >
+          <path
+            d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"
+          ></path>
+        </svg>
+        <svg
+          class="close"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          style="fill: #000000"
+        >
+          <path
+            d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+          ></path>
+        </svg>
+      </label>
+
+      <ul class="nav__menu">
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">SPP</a></li>
+          <li><a href="#">Glimpses</a></li>
+          <li><a href="#"></a></li>
+          <li><a href=""></a></li>
+      </ul>
+    </nav>
+
     <span id="title-1">COGNIZANCE 2022 PRESE</span>
     <span id="title-2">NTS </span>
 
@@ -69,14 +112,24 @@
     <div class="perks-container">
       <div class="perks-card">
         <div>
-          <img class='one' id='1' src="./assets/images/pr intersnip certificate.svg" alt="" />
+          <img
+            class="one"
+            id="1"
+            src="./assets/images/pr intersnip certificate.svg"
+            alt=""
+          />
         </div>
         <div><p>PR Internship certificate from Cognizance IIT Roorkee</p></div>
       </div>
 
       <div class="perks-card">
         <div>
-          <img class='one' id='2' src="./assets/images/internship opportunity.svg" alt="" />
+          <img
+            class="one"
+            id="2"
+            src="./assets/images/internship opportunity.svg"
+            alt=""
+          />
         </div>
         <div><p>Internship opportunities from our proud sponsors</p></div>
       </div>
