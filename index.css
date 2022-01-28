@@ -52,7 +52,7 @@ body {
   grid-template-areas:
     ". . ."
     ". . .";
-    padding: 5rem;
+  padding: 5rem;
 }
 
 .perks-card {
@@ -66,11 +66,10 @@ body {
   padding: 1.5rem;
 }
 
-.one{
-    height: auto;
-    width: 100%;
+.one {
+  height: auto;
+  width: 100%;
 }
-
 
 .spp_steps-container {
   margin-top: none;
@@ -98,48 +97,154 @@ body {
       ". ."
       ". .";
   }
-
 }
-
 
 /* Navbar here */
 
 /* I am making it mobile first. So, will be adding the media-query for desktop view */
 
-.logo{
-  display: flex;
+.logo {
+  display: none;
+  /* display: flex; */
   align-items: center;
-  
+  /* margin: 8px; */
 }
 
-.logo>img{
-  margin: 10px;
-  
+.logo > img {
+  margin-left: 40%;
+  margin-top: 0.5rem;
+  object-fit: fill;
+  size: 2rem;
+  /* margin-right: 40%; */
 }
 
-.logo>span{
+.logo > p {
   font-weight: bold;
   display: none;
 }
 
-.nav{
-  border-bottom: 1px solid green;
+.nav {
+  position: relative;
+  margin-bottom: 2rem;
 
 }
 
-.nav__toggle{
+.nav__toggle {
   position: absolute;
   cursor: pointer;
   margin: 0rem 1rem;
   left: 0;
 }
 
-
 /* We do not want to display the checkbox */
-.nav__checkbox{
+.nav__checkbox {
   display: none;
 }
 
-.close{
+.close {
   display: none;
+}
+
+.nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav > ul > li {
+  display: none;
+}
+
+.nav > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#logo_2 {
+  display: block;
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+@media only screen and (min-width: 1266px) {
+  .nav {
+    float: left;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+
+  .logo {
+    margin-right: 25vw;
+  }
+
+  #logo_written {
+    display: block;
+    font-weight: bold;
+  }
+
+  .nav__toggle > .close {
+    display: none;
+  }
+  .nav__toggle > .menu {
+    display: none;
+  }
+
+  .nav > ul {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav > ul > li {
+    display: block;
+    /* color: khaki; */
+  }
+
+  .logo {
+    /* display: none; */
+    display: flex;
+    /* justify-items: space; */
+    align-items: center;
+    /* align-items: center; */
+    margin-right: 20% ;
+  }
+  
+  .logo > img {
+    margin-left: 40%;
+    margin-top: 0.5rem;
+    object-fit: fill;
+    size: 2rem;
+    /* margin-right: 40%; */
+  }
+  
+  #logo_written{
+    /* font-size: 1rem; */
+  }
+  
+
+  #logo_2 {
+    display: none;
+  }
 }
