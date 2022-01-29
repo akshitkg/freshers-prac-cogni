@@ -66,7 +66,7 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: 1.2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 #logo_2 {
@@ -172,7 +172,7 @@ body {
 }
 
 #title-2 {
-  border-bottom: 3px solid aqua;
+  border-bottom: 3px solid #19D2A6;
   /* font-size: 1.2rem; */
 }
 
@@ -224,20 +224,22 @@ body {
 
 .hero-container-2{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 15%;
-    padding-right: 15%;
+    /* padding-right: 15%; */
     align-items: center;
 
 }
 
 #register-spp-button{
-    padding: 1.3rem;
-    font-size: 1.2rem;
+    padding: 19px;
+    font-size: 18px;
     font-weight: bold;
     background-color: #19D2A6;
     border: none;
+    /* display: block; */
 }
 
 .social-icon-list{
@@ -251,6 +253,10 @@ body {
 
 .social-icon{
     padding: 0.5rem;
+}
+
+#icon-divider-line{
+    padding: none;
 }
 
 .line{
@@ -269,7 +275,7 @@ body {
   size: inherit;
 }
 
-.perks-container {
+/* .perks-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -278,9 +284,33 @@ body {
     ". . ."
     ". . .";
   padding: 5rem;
+} */
+
+.perks-container{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    margin-top: 100px;
+    justify-content: center;
 }
 
-.perks-card {
+.perks-container-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 1rem; */
+
+}
+
+.perks-container-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* .perks-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,43 +319,130 @@ body {
   text-align: center;
   background-color: #111b1e;
   padding: 1.5rem;
+  margin: 1rem;
+} */
+
+.perks-cards{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #111b1e;;
+    width: 22%;
+    text-align: center;
+    /* font-weight: bold; */
 }
 
-.one {
-  height: auto;
-  width: 100%;
+@media screen and (max-width: 968px) {
+    .perks-container-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .perks-container-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .perks-cards{
+      display: flex;
+      flex-direction: column;
+      font-size: 1.4rem;
+      align-items: center;
+      padding: 1rem;
+      margin: 2rem;
+      background-color: #111b1e;;
+      width: 50%;
+      text-align: center;
+      /* font-weight: bold; */
+    }
+
+    .spp-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+  .green-line{
+      display: block;
+    }
+
+    .social-links{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    #icon-divider-line{
+        display: none;
+    }
+
+    
 }
+
+/* MediaQuery End  */
+
+.spp-container {
+    margin-top: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+
+.spp-steps-container{
+    margin-top: 60px;
+}
+
+.spp-steps{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    align-items: center;
+    margin: none;
+    /* margin-top: rem; */
+}
+
+.green-line{
+    width: 5px;
+    height: 4rem;
+    background-color: #19D2A6;
+    display: block;
+
+}
+
+.item-number{
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    border: 1px solid #19D2A6;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    /* padding-bottom: none; */
+    margin: 1rem;
+}
+
+.list-items{
+    font-size: 2rem;
+}
+
+
+
 
 .spp_steps-container {
   margin-top: none;
+  display: flex;
+  flex-direction: column;
+
 }
 
-/* Media Queries */
-
-@media screen and (max-width: 968px) {
-  /* .perks-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    position: relative;
-    padding: 5px;
-    column-gap: 4rem;
-    position: relative;
-    overflow: hidden;
-    grid-template-areas:
-      ". ."
-      ". ."
-      ". .";
-  } */
-
-  .perks-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    /* width: 100%; */
-  }
-
-  .perks-card {
-    width: 100%;
-  }
+.spp-image-container{
+    margin: 1rem;
 }
