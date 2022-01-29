@@ -1,67 +1,264 @@
-body{
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  overflow-x: hidden;
+}
+
+
+/* Navbar here */
+
+/* I am making it mobile first. So, will be adding the media-query for desktop view */
+
+.logo {
+  display: none;
+  /* display: flex; */
+  align-items: center;
+  /* margin: 8px; */
+}
+
+.logo > img {
+  margin-left: 40%;
+  margin-top: 0.5rem;
+  object-fit: fill;
+  size: 2rem;
+  /* margin-right: 40%; */
+}
+
+.logo > p {
+  font-weight: bold;
+  display: none;
+}
+
+.nav {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.nav__toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  left: 0;
+}
+
+/* We do not want to display the checkbox */
+.nav__checkbox {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav > ul > li {
+  display: none;
+}
+
+.nav > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#logo_2 {
+  display: block;
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+@media only screen and (min-width: 1266px) {
+  .nav {
+    float: left;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
     background-color: black;
-    color: white;
-    overflow-x: hidden;
-}
-
-#title-1{
-    /* border-bottom: white 3px; */
-    font-weight: bold;
-    /* text-decoration: underline; */
-    text-underline-offset: 2px;
-    /* text-underline-position: */
-    border-bottom: 3px solid white;
-    font-size: 1.2rem;
-}
-
-#title-2{
-    border-bottom: 3px solid aqua;
-    font-size: 1.2rem   ;
-}
-
-.hero-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: auto;
+    justify-content: center;
+  }
 
-    width: 100%;
-}
+  .logo {
+    margin-right: 25vw;
+  }
 
-.hero-image-container img{
-    width: 300px;
-    height: 300px;
-}
+  #logo_written {
+    display: block;
+    font-weight: bold;
+  }
 
-.middle-divider-container{
-    margin-top: 100px;
-    padding-right: 45%;
-    padding-left: 50%;
-}
+  .nav__toggle > .close {
+    display: none;
+  }
+  .nav__toggle > .menu {
+    display: none;
+  }
 
-.middle-divider-container img{
-    size: inherit;
-}
-
-.perks-container{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    
-    
-    
-    /* justify-content: stretch; */
-}
-
-.perks-card{
-    /* width: 400px;     */
+  .nav > ul {
     display: flex;
-    flex-direction: column;
-    width: 250px;
+    flex-direction: row;
+    margin-right: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav > ul > li {
+    display: block;
+    /* color: khaki; */
+  }
+
+  .logo {
+    /* display: none; */
+    display: flex;
+    /* justify-items: space; */
     align-items: center;
-    text-align: center;
-    background-color: rgba(131, 148, 182, 0.2);
-    margin: 10px;
-    padding: 4px;
+    /* align-items: center; */
+    margin-right: 20%;
+  }
+
+  .logo > img {
+    margin-left: 40%;
+    margin-top: 0.5rem;
+    object-fit: fill;
+    size: 2rem;
+    /* margin-right: 40%; */
+  }
+
+  #logo_written {
+    /* font-size: 1rem; */
+  }
+
+  #logo_2 {
+    display: none;
+  }
+}
+/* Navbar End  */
+
+
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 10%;
+}
+
+#title-1 {
+  /* border-bottom: white 3px; */
+  font-weight: bold;
+  /* text-decoration: underline; */
+  text-underline-offset: 2px;
+  /* text-underline-position: */
+  border-bottom: 3px solid white;
+  font-size: 1.2rem;
+}
+
+#title-2 {
+  border-bottom: 3px solid aqua;
+  font-size: 1.2rem;
+}
+
+
+.hero-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-info-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+
+.middle-divider-container {
+  margin-top: 100px;
+  padding-right: 45%;
+  padding-left: 50%;
+}
+
+.middle-divider-container img {
+  size: inherit;
+}
+
+.perks-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 100px 80px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+  padding: 5rem;
+}
+
+.perks-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #111b1e;
+  padding: 1.5rem;
+}
+
+.one {
+  height: auto;
+  width: 100%;
+}
+
+.spp_steps-container {
+  margin-top: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 968px) {
+  /* .perks-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    position: relative;
+    padding: 5px;
+    column-gap: 4rem;
+    position: relative;
+    overflow: hidden;
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+  } */
+
+  .perks-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* width: 100%; */
+  }
+
+  .perks-card {
+    width: 100%;
+  }
 }
